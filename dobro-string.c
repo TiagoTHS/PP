@@ -14,23 +14,25 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 
-int ehNum(char st[]);
+int ehNum(const char st[]);
 
 int 
 main()
 {
-    char st[5];  //valor digitado pelo usuário armazenado em uma string
+    char st[5];  //seq digitado pelo usuário armazenado em uma string
     int n = 0;   //string digitada transformada em um número
     
-    printf("Digite o valor a ser dobrado: ");
+    printf("Digite um numero do conjunto dos Naturais: ");
     scanf("%s", st);
 
     if ( ehNum (st) == 0 )
     {
-        fprintf(stderr, "O valor digitado nao contem apenas algarismos\n");
-        return 0;
+        fprintf(stderr, "A seq digitada nao contem apenas algarismos\n");
+        return 5;
     }
 
     n = atoi(st);
@@ -50,27 +52,37 @@ main()
     
 */
 int
-ehNum (char array[])
+ehNum (const char array[])
 {
-    unsigned int i, k;
-    unsigned int j = 0;             //auxiliar para contar algarismos
-    char alg[10] = "0123456789";    //array de algarismos
+    unsigned int i;
+
+    /* Opção 1:
 
     for (i = 0; i < strlen(array); i++)
     {
-        for (k = 0; k < strlen(alg); k++)
+        if (array[i] < '0' || array[i] > '9')
         {
-            if (array[i] == alg[k])
-            {
-                j++;
-            }
+            return 0;
         }
     }
 
-    if (j == strlen(array))
+    */
+
+    // Opção 2:
+
+    for (i = 0; i < strlen(array); i++)
     {
-        return 1;
+        if (isdigit (array[i]))
+            continue;
+        else
+            return 0;
+        
+        /*
+            if ( !isdigit (str[i]) )
+                return 0;
+        */
+            
     }
 
-    return 0;
+    return 1;
 }

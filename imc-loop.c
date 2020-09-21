@@ -29,12 +29,9 @@ main() {
         c = getchar();
         while (getchar() != '\n');
         printf("\n");
-        if (c == 'n')
-        {
-            break;
-        }
         
-    } while (c == 's');
+        
+    } while (c != 'n');
     
     printf("\n");
     printf("Fim do Programa\n");

@@ -6,9 +6,10 @@ int main()
    printf("Digite a base e o expoente:\n");
    scanf("%d %d", &base, &exp);
 
-   for (i=1; i<= exp; i++)
+   while (exp > 0)
    {
         r = r * base;
+        exp--;
    }
    
    printf("\n");
