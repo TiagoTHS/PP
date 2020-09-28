@@ -16,7 +16,8 @@ main() {
         printf("Digite a altura(metros):\n");
         scanf("%f", &a);
         while (getchar() != '\n'); // limpar stdin universal
-        //setbuf(stdin, NULL); -> WINDOWS ou __fpurge(stdin); -> Linux
+        //setbuf(stdin, NULL); -> WINDOWS
+        //__fpurge(stdin); -> Linux
         
         imc = m / (a * a);
 

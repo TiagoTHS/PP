@@ -55,7 +55,6 @@ int
 ehNumR (const char array[])
 {
     unsigned int i;
-    int ocorreuS = 0;   //indica que ocorreu sinal
     int ocorreuP = 0;   //indica que ocorreu ponto
 
     for (i = 0; i < strlen(array); i++)
@@ -63,10 +62,10 @@ ehNumR (const char array[])
 
         if (array[i] == '-')
         {
-            if (ocorreuS || (i != 0))
-                return 0;
+            if (i == 0)
+                continue;
             else
-                ocorreuS = 1;
+                return 0;
         }
         else if (array[i] == '.')
         {

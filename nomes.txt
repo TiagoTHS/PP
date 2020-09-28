@@ -1,0 +1,4 @@
+beltano das couves 90 1.7
+fulano de tal 80 1.7
+sicrano de tel 75 1.7
+deltrano de tol 70 1.7
