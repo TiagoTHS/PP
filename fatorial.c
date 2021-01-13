@@ -8,7 +8,6 @@ int main() {
     scanf("%d", &n);
 
     /* Outra forma:
-
     for (fatorial = 1; n > 1; n--){
         fatorial = fatorial * n;
     }
@@ -17,15 +16,16 @@ int main() {
 
     if (n == 0){
         fatorial = 1;
-        return 0;
+        
+    }else{
+        fatorial = n;
+
+        for (i=n-1; i>0; i--){
+            fatorial = fatorial * i; 
+        }
     }
-
-    fatorial = n;
-
-    for (i=n-1; i>0; i--){
-        fatorial = fatorial * i; 
-    }
-
+    
+    
     printf("Fatorial de %d = %d\n", n, fatorial);
 
     return 0;
