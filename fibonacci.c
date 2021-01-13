@@ -9,7 +9,7 @@ int main() {
     while (n > 0)
     {
         x = x2 + x1;
-        printf("%d", x);
+        printf("%d ", x);
         x2 = x1;
         x1 = x;
         n = n - 1;
