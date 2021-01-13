@@ -10,8 +10,8 @@ int main() {
     {
         x = x2 + x1;
         printf("%d", x);
-        x1 = x2;
-        x2 = x;
+        x2 = x1;
+        x1 = x;
         n = n - 1;
     }
     
