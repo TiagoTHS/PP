@@ -12,9 +12,9 @@ int
 main() 
 {
 	int n=0; //número informado
-	int i;
+	int i = 0;
 	
-	printf("Digite um número maior que 0");
+	printf("Digite um numero maior que 0:\n");
 	scanf("%d", &n);
 
     /*
@@ -27,7 +27,7 @@ main()
 
 	while (n > 0)
 	{
-		printf("%d", i);
+		printf("%d ", i);
 		i = i + 2;
 		n = n - 1;
 	}
